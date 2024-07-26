@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="Views\Error\Error401.cshtml" />
+    <Content Remove="Views\Error\Error404.cshtml" />
+    <Content Remove="Views\Error\Error500.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Error\Error401.cshtml" />
+    <None Include="Views\Error\Error404.cshtml" />
+    <None Include="Views\Error\Error500.cshtml" />
+    <None Include="Views\Shared\Partial\_SideNavBar.cshtml" />
+    <None Include="Views\Shared\Partial\_TopNavBar.cshtml" />
+    <None Include="Views\Home\Charts.cshtml" />
+    <None Include="wwwroot\oldDocument\Layout_sidenav_light.cshtml" />
+    <None Include="wwwroot\oldDocument\Layout_static.cshtml" />
+    <None Include="Views\Account\Login.cshtml" />
+    <None Include="Views\Account\ForgotPassword.cshtml" />
+    <None Include="Views\Account\Register.cshtml" />
+    <None Include="Views\Home\Tables.cshtml" />
+    <None Include="wwwroot\css\site_dark.css" />
+    <None Include="wwwroot\css\styles.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="13.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation" Version="8.0.6" />
+    <PackageReference Include="Microsoft.Identity.Web" Version="2.20.0" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="7.6.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Service\Service.csproj" />
+  </ItemGroup>
+
+</Project>

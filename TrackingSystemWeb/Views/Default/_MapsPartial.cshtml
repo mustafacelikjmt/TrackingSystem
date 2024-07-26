@@ -1,0 +1,18 @@
+﻿<div id="map" style="width: 100%; height: 500px;"></div>
+
+<div id="connectionStatus" class="row">
+    <div class="col-md-8 offset-2">
+        <div class="alert alert-info">
+            <div class="d-flex align-items-center">
+                Bağlantı Durumu: <strong id="conStatus"></strong>
+                ,Client Sayısı: <strong id="clientCount"></strong>
+                <div id="loading" class="spinner-border ms-auto text-primary"></div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+    <div class="col-md-8 offset-2">
+        <ul class="list-group" id="nameList"></ul>
+    </div>
+</div>
+<script src="~/lib/microsoft/signalr/dist/browser/signalr.min.js"></script>

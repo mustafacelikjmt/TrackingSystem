@@ -1,0 +1,41 @@
+@{
+    Layout = "_AccountLayout";
+}
+@model RegisterViewModel
+
+<div class="background">
+    <div class="shape"></div>
+    <div class="shape"></div>
+</div>
+
+<form class="register container" asp-controller="Account" asp-action="Register" method="post">
+    <h3>Register Here</h3>
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="row">
+        <div class="col-6">
+            <label asp-for="FullName">Full Name</label>
+            <input asp-for="FullName" type="text" placeholder="FullName" id="FullName">
+
+            <label asp-for="Email">Email</label>
+            <input asp-for="Email" type="email" placeholder="Email" id="email">
+
+            <label asp-for="Password">Password</label>
+            <input asp-for="Password" type="password" placeholder="Password" id="password">
+        </div>
+
+        <div class="col-6">
+            <label asp-for="UserName">Username</label>
+            <input asp-for="UserName" type="text" placeholder="Username" id="username">
+
+            <label asp-for="Phone">Phone Number</label>
+            <input asp-for="Phone" type="tel" placeholder="Phone" id="phone">
+
+            <label asp-for="ConfirmPassword">Confirm Password</label>
+            <input asp-for="ConfirmPassword" type="password" placeholder="Confirm Password" id="confirm-password">
+        </div>
+    </div>
+
+    <button type="submit">Register</button>
+
+    <a class="register" asp-controller="Account" asp-action="Login">Do you have an account? Login</a>
+</form>
